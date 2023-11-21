@@ -12,9 +12,9 @@
 let lightboxTitle = "My Western Vacation";
 
 // Names of the image files shown in the slideshow
-let imgFiles = ["photo01.jpg", "photo02.jpg", "photo03.jpg", "photo04.jpg",
-                "photo05.jpg", "photo06.jpg", "photo07.jpg", "photo08.jpg",
-                "photo09.jpg", "photo10.jpg", "photo11.jpg", "photo12.jpg"]
+let imgFiles = ["images/photo01.jpg", "images/photo02.jpg", "images/photo03.jpg", "images/photo04.jpg",
+                "images/photo05.jpg", "images/photo06.jpg", "images/photo07.jpg", "images/photo08.jpg",
+                "images/photo09.jpg", "images/photo10.jpg", "images/photo11.jpg", "images/photo12.jpg"]
 
 // Captions associated with each image
 let imgCaptions = new Array(12);
