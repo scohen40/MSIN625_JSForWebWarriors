@@ -14,17 +14,29 @@ document.getElementById("getFile").onchange = function() {
     // Retrieve information about the selected file
     let userFile = this.files[0];
     
-    // Read the contents of the selected file
-    let fr = new FileReader();
-    fr.readAsText(userFile);
+    // Verify that a text file is selected
+    try {
+        let isText = userFile.type.startsWith("text");
+        if (!isText) {
+            throw userFile.name + " is not a text file";
+        }
     
-    // Once the file has finished loading, display in the page
-    let sourceDoc = document.getElementById("wc_document");
-    fr.onload=function(){
-        sourceDoc.innerHTML = fr.result;
-        
-        // Store the text of the document, removing HTML tags
-        let sourceText = sourceDoc.textContent;
+        // Read the contents of the selected file
+        let fr = new FileReader();
+        fr.readAsText(userFile);
+
+        // Once the file has finished loading, display in the page
+        let sourceDoc = document.getElementById("wc_document");
+        fr.onload=function(){
+            sourceDoc.innerHTML = fr.result;
+
+            // Store the text of the document, removing HTML tags
+            let sourceText = sourceDoc.textContent;
+        }
+    }
+    // Alert the user to select a text file
+    catch(err) {
+        window.alert(err);
     }
     
 };
