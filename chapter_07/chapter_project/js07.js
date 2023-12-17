@@ -58,7 +58,10 @@ document.getElementById("getFile").onchange = function() {
             sourceText = sourceText.replace(stopRegx, "");
         }
         
-        console.log(sourceText);
+        // Place the remaining words in array
+        let words = sourceText.split(/\s+/g);
+        
+        console.log(words);
     }
     
 };
