@@ -52,6 +52,12 @@ document.getElementById("getFile").onchange = function() {
         let alphaRegx = /[^a-zA-Z\s]/g;
         sourceText = sourceText.replace(alphaRegx, "");
         
+        // Remove stop words from the text
+        for (let i = 0; i < stopWords.length; i++) {
+            let stopRegx = new RegExp("\\b"+stopWords[i]+"\\b", "g");
+            sourceText = sourceText.replace(stopRegx, "");
+        }
+        
         console.log(sourceText);
     }
     
