@@ -64,6 +64,24 @@ document.getElementById("getFile").onchange = function() {
         // Sort the words in alphabetical order
         words.sort();
         
+        // Create an 2D array in which each item is array
+        // containing a word and its duplicate count
+        let unique = [ [words[0], 1] ];
+        
+        // Keep an index of the unique words
+        let uniqueIndex = 0;
+        
+        for (let i = 1; i < words.length; i++ ) {
+            if (words[i] === words[i-1] ) {
+                // Increase the duplicate count by 1
+                unique[uniqueIndex][1]++;
+            } else {
+                // Add a new word to the unique array
+                uniqueIndex++;
+                unique[uniqueIndex] = [words[i], 1];
+            } 
+        }
+        
         console.log(words);
     }
     
