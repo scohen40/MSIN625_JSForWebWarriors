@@ -47,6 +47,11 @@ document.getElementById("getFile").onchange = function() {
         // and remove leading and trailing whitespace
         sourceText = sourceText.toLowerCase();
         sourceText = sourceText.trim();
+        
+        // Leave only alphabet characters and whitespace in the text
+        let alphaRegx = /[^a-zA-Z\s]/g;
+        sourceText = sourceText.replace(alphaRegx, "");
+        
         console.log(sourceText);
     }
     
