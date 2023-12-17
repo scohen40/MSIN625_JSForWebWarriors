@@ -61,6 +61,9 @@ document.getElementById("getFile").onchange = function() {
         // Place the remaining words in array
         let words = sourceText.split(/\s+/g);
         
+        // Sort the words in alphabetical order
+        words.sort();
+        
         console.log(words);
     }
     
