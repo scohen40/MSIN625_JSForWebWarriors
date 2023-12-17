@@ -4,8 +4,8 @@
       Chapter case   
 
       Word Cloud   Generator
-      Author: 
-      Date:       
+      Author: Sarah Cohen
+      Date: 12/17/2023
 
       Filename:       js07.js
  */
