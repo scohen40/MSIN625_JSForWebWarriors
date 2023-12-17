@@ -10,6 +10,12 @@
       Filename:       js07.js
  */
 
+document.getElementById("getFile").onchange = function() {
+     // Retrieve information about the selected file
+     let userFile = this.files[0];
+};
+
+
 
 
 
