@@ -82,7 +82,12 @@ document.getElementById("getFile").onchange = function() {
             } 
         }
         
-        console.log(words);
+        // Sort by descending order of duplicate count
+        unique.sort(byDuplicate);
+        function byDuplicate(a, b) {
+            return b[1]-a[1];
+        }
+        
     }
     
 };
